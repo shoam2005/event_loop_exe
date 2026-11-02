@@ -19,8 +19,13 @@ function run() {
     orders = count;
   });
 
-  console.log("User: " + user);
-  console.log("Orders: " + orders);
+  setTimeout(() => {
+    console.log("User: " + user);
+  }, 40)
+  setTimeout(() => {
+    console.log("Orders: " + orders);
+  }, 40);
+  
 }
 
 if (typeof module !== "undefined") module.exports = { run };

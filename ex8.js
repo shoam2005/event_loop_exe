@@ -1,16 +1,24 @@
 // ex8.js
 function run() {
   const steps = ["Step 1", "Step 2", "Step 3"];
+  let time=0
 
-  for (var i = 0; i < steps.length; i++) {
-    setTimeout(() => {
+  for (let i = 0; i < steps.length; i++) {
+    time+=10
+       f(time,i)
+  }
+  function f(time,i){
+     setTimeout(() => {
       setMessage(steps[i]);
       addLine(steps[i]);
-    }, 10);
+    }, time);
   }
+  setTimeout(() => {
+    setMessage("Done!");
+    addLine("Done!");
+  }, 50);
 
-  setMessage("Done!");
-  addLine("Done!");
+
 }
 
 if (typeof module !== "undefined") module.exports = { run };
